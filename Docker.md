@@ -117,3 +117,110 @@ docker import file.tar newimage
 - ***export*** works with Docker containers, and it exports a snapshot of the container’s file system. Use this command if you want to share or back up the result of building an image.
 
 - ***import*** works with the file system of an exported container, and it imports it as a Docker image. Use this command if you have an exported file system you want to explore or use as a layer for a new image.
+
+
+
+## Optional
+## Deploy two tier Application on docker
+
+- [ ] Clone the repository from github using below command
+```
+git clone https://github.com/monbostest/java-code1.git
+```
+- [ ] Create a war file using(maven image)  below command
+```
+cd java-code1
+docker run -it --rm --name my-maven-project -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
+```
+**NOTE**  You will have a target folder created where your war file will be stored.
+- [x] Create a tomcat container
+```
+docker run -d -p 8888:8080 tomcat
+```
+
+- [ ]  Copy the war file to /usr/local/tomcat/webapps using below command
+```
+docker cp  /target/<*.war file >dockerid:/usr/local/tomcat/webapps
+```
+
+**NOTE**  Now please if you are able to access your application in your browser
+```
+IPaddress:8888/studentapp-2.5-SNAPSHOT/
+```
+
+#######   Configuring Backend (MySql Database to store user details)
+
+
+ - [ ] Create Mysql Container using below command
+```
+docker run -d -e MYSQL_ROOT_PASSWORD=root mysql:5.6
+```
+-  [ ] Create database 
+```
+docker exec -it <container-id> sh
+mysql -u root -p
+create database studentapp;
+use studentapp;
+
+CREATE TABLE Students(student_id INT NOT NULL AUTO_INCREMENT,
+student_name VARCHAR(100) NOT NULL,
+student_addr VARCHAR(100) NOT NULL,
+student_age VARCHAR(3) NOT NULL,
+student_qual VARCHAR(20) NOT NULL,
+student_percent VARCHAR(10) NOT NULL,
+student_year_passed VARCHAR(10) NOT NULL,
+PRIMARY KEY (student_id)
+);
+
+grant all privileges on studentapp.* to 'student'@'%' identified by 'student@1';
+
+flush privileges;
+
+```
+
+
+NOW we are ready with Frontend and backend service .
+
+To make a connection b/w Application with Database you need to install mysql connector in tomcat container.
+
+- [ ] use below command to have mysql connector after login to tomcat container
+```
+cd lib
+wget https://github.com/cit-latex/stack/raw/master/mysql-connector-java-5.1.40.jar 
+```
+
+- [ ] Make database entry 
+```
+apt-get update
+apt-get install vim -y
+Add the following content just before last line
+vim conf/context.xml
+<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+               maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+               username="student" password="student@1" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://<IP-ADDRESS-OF-DB-SERVER>:3306/studentapp"/>
+```
+- [ ] Restart your application container
+```
+docker restart <container-id>
+```
+
+
+Now Verify if you are able to upload the data to your database using application
+
+- [ ] convert running container into an image
+```
+docker commit <container id>
+
+````
+- [ ] check image
+```
+docker images
+```
+- [ ] login to docker hub
+```
+docker login
+```
+- [ ]  Create a repository on dockerhub
+- [ ]  Tag your image
+- [ ]  Push your image to dockerhub
