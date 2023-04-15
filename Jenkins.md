@@ -88,5 +88,5 @@ docker run dit -p 80:8080 myapp
 - [ ] Make a test
 
 ```
-ip address:warfile
+ip address:port/warfile
 ```
