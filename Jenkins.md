@@ -59,7 +59,31 @@
 
 
 - [ ] Deploy war file to tomcat server 
+- [ ] Add Jenikins user to sudo file using below options so that jenkins user can execute command with sudo
+```
+visudo
 
-**will be updated after docker Class**
+jenkins ALL=(ALL) NOPASSWD: ALL
+
+```
+**Now check the commands below**
+![image](https://user-images.githubusercontent.com/120269399/232224305-c1686f66-dea6-4242-bfc9-a2f456931edd.png)
+
+**Dockerfile to deploy**
+```
+FROM tomcat:8.0-alpine
+LABEL maintainer=""
+
+ADD studentapp-2.5-SNAPSHOT.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+- [ ]  Create a docker image and run that
+```
+docker build -t myapp .
+docker run dit -p 80:8080 myapp
+```
 - [ ] Make a test
-**will be updated after docker Class**
+```
+ip address:warfile
+```
