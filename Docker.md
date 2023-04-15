@@ -120,6 +120,13 @@ docker import file.tar newimage
 
 
 
+
+#### Add below permission if the jenkins is not able to run docker command
+```
+sudo chmod 666 /var/run/docker.sock
+```
+
+
 ## Optional
 ## Deploy two tier Application on docker
 
