@@ -78,12 +78,15 @@ ADD studentapp-2.5-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
+```
 - [ ]  Create a docker image and run that
+
 ```
 docker build -t myapp .
 docker run dit -p 80:8080 myapp
 ```
 - [ ] Make a test
+
 ```
 ip address:warfile
 ```
