@@ -102,32 +102,30 @@ kubectl get svc
 - [ ] Create one deploy
 
 ```
-     kubectl create deployment myapp1 --image=nginx
+kubectl create deployment myapp1 --image=nginx
      
+ ```
+ - [ ] Create svc 
+ 
   ```
-  - [ ] Create svc 
-
-```
-     kubectl expose deployment/myapp1 --port=80
-     
-     ```
-     - [ ] Update your deployment
-     ```
+  kubectl expose deployment/myapp1 --port=80
+  ```
+ - [ ] Update your deployment
+   ```
     kubectl set image deployment myapp1 nginx=httpd
     
     ```
-     - [ ] Check your app
+ - [ ] Check your app
      
-     ```
-    kubectl port-forward deployment/myapp1 81:80
     ```
-    - [ ] Rollback your Application
+   kubectl port-forward deployment/myapp1 81:80
     ```
-    
-    kubectl rollout undo deploy/myapp1
+ - [ ] Rollback your Application
     ```
-    - [ ] Verify once
+   kubectl rollout undo deploy/myapp1
     ```
-    kubectl port-forward deployment/myapp1 81:80
+ - [ ] Verify once
+    ```
+   kubectl port-forward deployment/myapp1 81:80
     ```
 
