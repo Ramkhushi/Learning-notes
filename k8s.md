@@ -67,4 +67,32 @@ localhost:hostpaort
 chown jenkins /var/lib/jenkins/.kube/ -R
 ```
 
-**Now you should be able to execute any kubectl command from jenkins **
+**Now you should be able to execute any kubectl command from jenkins**
+
+
+
+
+## Frequently used kubernets commands
+ ```
+ https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+ ```
+ - [ ] Check no of nodes attached
+
+```
+kubectl get nodes
+```
+- [ ] To check no of pods
+
+```
+kubectl get pods
+```
+- [ ] To check no of deployment
+
+```
+kubectl get deploy
+```
+- [ ] How to check no of SVC
+
+```
+kubectl get svc
+```
