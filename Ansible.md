@@ -261,6 +261,26 @@ ansible-playbook  play.yaml  -C
    ```
    
    
+   
+   ## Optional if you want to try with ssh key in place of Password
+   
+   - [ ] Create ssh key on Ansible controller
+
+```
+ssh-keygen    press enter twice 
+```
+
+- [ ] Send the ssh public to another vm
+
+```
+ssh-copy-id <vm ip>
+```
+
+Now You will be able to rub Ansible commdnds without password .
+
+
+
+Happy Learning 
 
 
 
