@@ -106,7 +106,7 @@ wget https://raw.githubusercontent.com/ansible/ansible/stable-2.9/examples/ansib
 -  [ ] Start with Local host for test
 
 ```
-ansible local -m ping --connection=local
+ansible localhost  -m ping --connection=local
 ```
 - [ ] Create an inventory file
 
