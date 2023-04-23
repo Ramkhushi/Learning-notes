@@ -18,3 +18,21 @@ provider "aws" {
   token = "<>"
 }
 ```
+- [ ] run the below command
+
+```
+terraform init
+```
+
+- [ ] Create another file
+
+```
+resource "aws_instance" "web" {
+  ami           = <imageid>
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+```
