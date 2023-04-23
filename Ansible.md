@@ -121,7 +121,7 @@ Ip-address
 ```
 ansible test -m ping 
 ```
-- [ ] Add below line to /etc/ansible/ansible.cfg
+- [ ] Add below line to /etc/ansible/ansible.cfg.  after [defaults]
 
 ```
 vi /etc/ansible/ansible.cfg
