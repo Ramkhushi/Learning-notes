@@ -54,10 +54,10 @@ ubuntu for ubuntu OS
 ```
 sudo -s
 ```
-- [ ] Enable Password Authentication 
+- [ ] Enable Password #PermitRootLogin prohibit-password 
 
 ```
-sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 
 systemctl restart sshd
