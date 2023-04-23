@@ -36,3 +36,30 @@ resource "aws_instance" "web" {
   }
 }
 ```
+
+
+- [ ] Run the below command to check what your code will do
+
+```
+terraform plan
+```
+
+- [ ] Execute your code to create vm
+
+```
+terraform apply
+```
+
+- [ ] Code for key
+
+```
+resource "aws_instance" "web" {
+  ami           = "ami-007855ac798b5175e"
+  instance_type = "t2.micro"
+  key_name =  < >
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+```
