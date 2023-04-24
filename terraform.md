@@ -78,7 +78,6 @@ ssh -i <pemfile> ubuntu@ip
 # ELK Stack for Logging on Lab VM
 
 
-- [ ] Download the code using below commands
 
 ```
 sudo su
@@ -174,6 +173,18 @@ chmod 777 /var/run/docker.sock
 ![image](https://user-images.githubusercontent.com/120269399/233934994-3e93d3e6-e96f-422f-a046-de8427c74396.png)
 
 
+- [ ]  If you get the below error
+
+![image](https://user-images.githubusercontent.com/120269399/233961786-8c1a3642-624c-4353-b7a2-79b4e3bb7152.png)
+
+
+- [ ] Install Docker Pipeline plugin
+
+```
+Dashboard > Manage Jenkins > Manage Plugins > Available (tab) > docker-workflow
+```
+
+![image](https://user-images.githubusercontent.com/120269399/233963987-2e9dc9b4-fd44-4083-87e4-23b6577f25bb.png)
 
 
 
