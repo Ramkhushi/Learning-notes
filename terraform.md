@@ -82,6 +82,7 @@ ssh -i <pemfile> ubuntu@ip
 
 ```
 sudo su
+cd 
 git clone https://github.com/Siraj-ul-muneera/ELKExample.git
 cd ELKExample
 ls -alrt
@@ -102,9 +103,24 @@ docker-compose version
 ```
 sysctl -w vm.max_map_count=262144
 ```
+- [ ] Remove the files to upgrade OS
 
+```
+cd /etc/apt/sources.list.d/
+rm -rvf kubernetes.list* google-chrome.list* jenkins.list*
+```
+- [ ] remove docker completly .
+```
+systemtcl unmask docker
+apt remove docker*
+
+init 6
+```
 - [ ] 	Run the docker-compose command to initialize the ELK stack.
 ```
+sudo -s
+cd 
+cd ELKExample
 docker-compose up -d
 ```
  - [ ] Check running containers
@@ -118,8 +134,8 @@ docker ps
 http://localhost:5601/app/kibana
 ```
 
- - [ ] : Configure Jenkins pipeline for Docker build and deployment
- - [ ] 	From the browser, navigate to http://localhost:8080 and login to Jenkins
+ - [ ] Configure Jenkins pipeline for Docker build and deployment
+ - [ ] From the browser, navigate to http://localhost:8080 and login to Jenkins
  - [ ] 	2.2	Configure your Docker hub credentials in Jenkins. Go to Manage Jenkins -> Manage Credentials -> click on Jenkins link -> click on Global credentials (unrestricted) -> click on Add Credentials from the left pane.
  ![image](https://user-images.githubusercontent.com/120269399/233934312-7bbd88bc-711b-4497-8dd3-aec98d8ceb47.png)
 
