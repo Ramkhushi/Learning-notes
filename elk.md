@@ -64,7 +64,7 @@ dpkg -i filebeat-6.8.23-amd64.deb
 - [ ] Restart filebeat svc
 
 ```
-systemct restart filebeat
+systemctl restart filebeat
 systemctl status filebeat
 systemct enable filebeat
 ```
