@@ -41,3 +41,11 @@ systemctl enable kibana
 ```
 localhost:5601
 ```
+
+
+- [ ] Download and install filebeat
+
+```
+wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.23-amd64.deb
+dpkg -i filebeat-6.8.23-amd64.deb
+```
