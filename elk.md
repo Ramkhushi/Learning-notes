@@ -49,3 +49,31 @@ localhost:5601
 wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.23-amd64.deb
 dpkg -i filebeat-6.8.23-amd64.deb
 ```
+- [ ] Modify /etc/filebeat/filebeat.yaml as below highlighted 
+
+![image](https://user-images.githubusercontent.com/120269399/234763413-ec9a36cd-4835-4b63-b9be-1e78cca22900.png)
+
+- [ ]  Add Dashboard block as well if needed 
+
+![image](https://user-images.githubusercontent.com/120269399/234763696-ab868776-b64d-4cf3-bb64-e0fa8cb5dab9.png)
+
+
+##NOTE: Same configuration can be done for metricbeat/heartbeat etc
+
+
+- [ ] Restart filebeat svc
+
+```
+systemct restart filebeat
+systemctl status filebeat
+systemct enable filebeat
+```
+
+- [ ] Test the configuration for filebeat
+
+```
+filebeat test config
+filebeat test output
+```
+
+ 
