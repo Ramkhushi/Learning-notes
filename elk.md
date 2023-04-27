@@ -113,3 +113,18 @@ systemctl enable metricbeat
 
 - [ ] Modify /etc/metricbeat/metricbeat.yaml as earlier
 
+![image](https://user-images.githubusercontent.com/120269399/234767874-85f8bba3-abf4-4235-92f1-6855482e82e4.png)
+
+- [ ] Check configuration
+
+```
+metricbeat test config
+metricbeat test output
+```
+- [ ] loads dashboard
+
+```
+metricbeat setup
+```
+
+sysctl -w vm.max_map_count=262144
