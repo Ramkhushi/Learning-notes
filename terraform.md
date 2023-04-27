@@ -74,26 +74,4 @@ ssh -i <pemfile> ubuntu@ip
 
 
 
-### ELK Install Elasticsearch 
 
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-
-sudo chmod +x /usr/local/bin/docker-compose
-
-
-
-
-workflow-aggregator
-wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.0-amd64.deb
-
-dpkg -i filebeat-6.8.0-amd64.deb
-```
-
-- [ ] Run the below command
-
-```
-filebeat test config
-filebeat test output
-```
