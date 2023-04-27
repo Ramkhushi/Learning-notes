@@ -49,7 +49,7 @@ localhost:5601
 wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.8.23-amd64.deb
 dpkg -i filebeat-6.8.23-amd64.deb
 ```
-- [ ] Modify /etc/filebeat/filebeat.yaml as below highlighted 
+- [ ] Modify /etc/filebeat/filebeat.yml as below highlighted 
 
 ![image](https://user-images.githubusercontent.com/120269399/234763413-ec9a36cd-4835-4b63-b9be-1e78cca22900.png)
 
@@ -58,7 +58,7 @@ dpkg -i filebeat-6.8.23-amd64.deb
 ![image](https://user-images.githubusercontent.com/120269399/234763696-ab868776-b64d-4cf3-bb64-e0fa8cb5dab9.png)
 
 
-##NOTE: Same configuration can be done for metricbeat/heartbeat etc
+## NOTE: Same configuration can be done for metricbeat/heartbeat etc
 
 
 - [ ] Restart filebeat svc
@@ -76,4 +76,40 @@ filebeat test config
 filebeat test output
 ```
 
+- [ ] Check all enable modules, enable and disable
+
+```
+filebeat modules list
+
+filebeat modules enable <module name>
+filebeat modules disable <modulename
+```
+ - [ ] Create Dashboard in Kibana
+
+```
+filebeat setup
+```
  
+ Now Go and check if filebeat index is created 
+ you can alsoc check for Dashboard
+
+
+
+
+
+- [ ] Download and Install Metricbeat
+
+```
+wget https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.8.23-amd64.deb
+dpkg -i metricbeat-6.8.23-amd64.deb
+```
+- [ ] Start Service of Metricbeat
+
+```
+systemct restart metricbeat
+systemctl status metricbeat
+systemctl enable metricbeat
+```
+
+- [ ] Modify /etc/metricbeat/metricbeat.yaml as earlier
+
