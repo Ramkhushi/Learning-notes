@@ -112,3 +112,28 @@ admin
 ![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/87cb17af-6106-4fbe-b345-d2e0a0b1f018)
 
 
+
+
+## Jenkins and Nexus
+- [ ] Login to Jenkins and install the plugin
+
+```
+nexus platform
+```
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/6af1a48a-7b7e-4d7e-8f2c-73a516e41311)
+
+- [ ]  Configure nexus Server
+
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/5a91e4fe-f7c8-417e-827d-03eabe902a5d)
+- [ ] Click on system config
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/5ba311be-8e9d-45d7-85bb-8cf5eec6361b)
+
+- [ ] Select Nexus server
+
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/0a1da1a2-9c3d-4412-9650-11e3bcc74acc)
+
+- [ ] Fill the information below
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/5d53e84c-199a-4a9c-aa53-7d3ff4e9d52d)
+
+
+
