@@ -1,4 +1,4 @@
-**Date** **16th April**
+
 ### Tasks
 - [ ] Create first jenkins jobs
 
