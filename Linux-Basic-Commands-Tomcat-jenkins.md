@@ -43,11 +43,12 @@ tar -xvf apache-tomcat-9.0.76.tar.gz
 
 ```
 vi conf/server.xml
-![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/5476fd3f-f6ba-4019-a1fd-e5dd7823342c)
-![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/70c006f4-87cf-42d3-9eeb-4bd388e213c2)
+
 
 Save this file 
 ```
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/5476fd3f-f6ba-4019-a1fd-e5dd7823342c)
+![image](https://github.com/Ramkhushi/Learning-notes/assets/120269399/70c006f4-87cf-42d3-9eeb-4bd388e213c2)
 - [ ] Start tomcat service 
 
 ```
