@@ -1,6 +1,6 @@
 - [ ] Generate ssh key using below command
 ```
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -f mykey
 ```
 
 - [ ]  start the ssh-agent in the background
@@ -10,5 +10,5 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 - [ ] Add your SSH private key to the ssh-agent
 ```
- ssh-add ~/.ssh/id_ed25519
+ ssh-add private key
  ```
