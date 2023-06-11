@@ -12,3 +12,6 @@ ssh-keygen -f mykey
 ```
  ssh-add private key
  ```
+
+
+- [ ]  Add the Public key to your Github repo
