@@ -18,7 +18,7 @@ unzip sonarqube-9.5.0.56709.zip
 ```
 - [ ] Move to sonarqube dir
 ```
-cd sonarqube-9.5.0.56709
+cd sonarqube-9.5.0.56709/bin/linux-x86-64
 ```
 - [ ] Now java version 11 or later 
 ```
@@ -27,6 +27,7 @@ cd sonarqube-9.5.0.56709
 
 - [ ] Now start the sonarqube with standard user
 ```
+
  ./sonar.sh start
  ./sonar.sh status
 ```
