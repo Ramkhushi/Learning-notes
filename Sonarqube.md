@@ -6,7 +6,7 @@ yum install wget -y
 ```
 - [ ] Download the sonarqube software 
 ```
-https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.5.0.56709.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.5.0.56709.zip
 ```
 - [ ] Install unzip command
 ```
