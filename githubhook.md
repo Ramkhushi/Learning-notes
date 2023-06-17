@@ -1,0 +1,3 @@
+- [ ] Login to jenkins Server 
+- [ ] Create a build
+- [ ] Select the Githb Trigger from build triger 
