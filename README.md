@@ -11,5 +11,12 @@
 [Jenkins Pipeline](https://github.com/Ramkhushi/Learning-notes/blob/main/Jenkins-Pipeline.md)
 
 
+[Sonarqube](https://github.com/Ramkhushi/Learning-notes/blob/main/Sonarqube.md)
+
+[Jacoco](https://github.com/Ramkhushi/Learning-notes/blob/main/Jacoco.md)
+
+[Junit Test](https://github.com/Ramkhushi/Learning-notes/blob/main/Junittest.md)
+
+
 
 
