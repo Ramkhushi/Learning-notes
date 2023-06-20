@@ -256,3 +256,74 @@ pipeline {
     }
 }
 ```
+
+
+- [ ] Pipeline which requires you to provide input
+
+```
+pipeline {
+    agent any
+    stages {
+        stage('Echo') {
+            input { 
+                message "Do you want to salute?" 
+            }
+            steps {
+                echo "Hello!"
+            }
+        }
+    }
+}
+```
+
+- [ ] Pipeline for When condition
+
+```
+pipeline {
+    agent any
+    stages {
+        stage('Echo') {
+            when { 
+                expression { env.GIT_BRANCH == 'origin/main' } 
+            }
+            steps {
+                echo 'Hello from the main branch!'
+            }
+        }
+    }
+```
+
+- [ ] Pipeline with Global variable
+```
+pipeline {
+    agent any
+    environment { PERSON = 'Joel'}
+    stages {
+        stage('Hello') {
+            steps {
+                echo "Hello ${PERSON}"
+            }
+        }
+    }
+}
+```
+
+- [ ] Pipeline for per stage environment variables
+```
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+            environment { PERSON = 'Aykut'} 
+            steps {
+                echo "Hello ${PERSON}" 
+            }
+        }
+        stage('Bye') {
+            steps {
+                echo "Bye ${PERSON}" 
+            }
+        }
+    }
+}
+```
